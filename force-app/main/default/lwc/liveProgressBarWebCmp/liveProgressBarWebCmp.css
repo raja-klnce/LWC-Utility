@@ -1,0 +1,26 @@
+.spinnerHolder{
+    position: relative !important;
+    display: inline-block !important;
+    width: 2% !important;
+}
+.slds-spinner_container {
+    position: relative !important ;
+    display: inline-block !important;
+    width: 2% !important;
+}
+.progressHolder{
+    position: relative;
+    display: inline-block;
+}
+.usepartial{
+    width: 95%;
+}
+.usefull{
+    width: 98%;
+}
+.recordContainer {
+    background-color: rgb(233 233 233)!important;
+}
+.alertBox {
+    font-weight: 200 !important;
+}

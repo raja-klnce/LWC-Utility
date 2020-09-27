@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>AccountsBulkUploadController</members>
+        <members>ExecuteDmlQueuableBatches</members>
+        <members>QueueableJobsHandler</members>
+        <members>ApexResponse</members>
+        <members>CustomException</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>liveProgressBarWebCmp</members>
+        <members>accountsBulkUpload</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+		<members>Account.Previous_Upload_Status__c</members>
+        <members>Account.Previous_Upload_Success_Count__c</members>
+        <members>Account.Previous_Upload_Total_Count__c</members>
+		<name>CustomField</name>
+	</types>
+    <types>
+		<members>Admin</members>
+		<name>Profile</name>
+	</types>
+    <version>49.0</version>
+</Package>
