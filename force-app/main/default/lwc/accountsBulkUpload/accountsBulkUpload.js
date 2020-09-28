@@ -2,19 +2,10 @@ import readCSV from '@salesforce/apex/AccountsBulkUploadController.createChildAc
 import { LightningElement, track, api } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
-/*const columns = [
-    { label: 'Name', fieldName: 'Name' },
-    { label: 'Industry', fieldName: 'Industry' },
-    { label: 'Rating', fieldName: 'Rating' },
-    { label: 'Type', fieldName: 'Type' },
-    { label: 'Website', fieldName: 'Website', type: 'url' }
-];*/
-
 export default class ReadCSVFileInLWC extends LightningElement {
-    @api recordId;
-    //columns = columns;
-    //@track data;
-    //error;
+
+    @api recordId;  //public attribute
+    //private attributes
     accountObj = {};
     labels = {
         progressMsg: "Uploaded {0} out of {1} child account records...",
@@ -24,7 +15,6 @@ export default class ReadCSVFileInLWC extends LightningElement {
     };
     showProgressBar = false;
 
-    // accepted parameters
     get acceptedFormats() {
         return ['.csv'];
     }

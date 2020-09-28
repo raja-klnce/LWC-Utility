@@ -2,20 +2,11 @@
     <lightning-card variant="base" title="Bulk upload child accounts under this parent account"
         icon-name="action:new_account">
         <div class="slds-p-left_large">
-            <!--<lightning-file-upload accept={acceptedFormats} label="Attach receipt" multiple="multiple"
-                onuploadfinished={handleUploadFinished} record-id={recordId}></lightning-file-upload>-->
             <lightning-file-upload label="Attach accounts csv file" name="fileUploader" accept={acceptedFormats}
                 record-id={recordId} onuploadfinished={handleUpload}>
             </lightning-file-upload>
         </div>
-        <!--<div if:true={error}>
-            {error}
-        </div><br />-->
         <br />
-        <!--<div if:true={data}>
-            <lightning-datatable columns={columns} data={data} hide-checkbox-column="true" key-field="id">
-            </lightning-datatable>
-        </div>-->
         <template if:true={showProgressBar}>
             <c-live-progress-bar-web-cmp size="large" variant="circular"
                 container-class="slds-p-left_large slds-p-right_large" progress-count-msg={labels.progressMsg}

@@ -1,3 +1,7 @@
+/* Name: QueueableJobsHandler
+Description : Controller class for child accounts bulk upload
+Author : Raja Karuppasamy
+*/
 public with sharing class AccountsBulkUploadController implements QueueableJobsHandler {
 
     @AuraEnabled
@@ -64,6 +68,7 @@ public with sharing class AccountsBulkUploadController implements QueueableJobsH
         return parentUpdate;
     }
 
+    //Upsert push topic method invoked before accounts upload to make sure push topic is always present
     public static void upsertPushTopic(String pushTopicName){
         List<PushTopic> topics = [SELECT Id FROM PushTopic WHERE Name = :pushTopicName]; 
         if(topics.isEmpty()) {
